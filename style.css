@@ -11,7 +11,7 @@ table {
 }
 
 input{
-    width:auto;
+    box-sizing: border-box;
 }
 
 .div{
