@@ -11,6 +11,7 @@ function initializeApp(data) {
     document.getElementById('utouidfield').textContent = data.context.utouId;
     document.getElementById('roomidfield').textContent = data.context.roomId;
     document.getElementById('groupidfield').textContent = data.context.groupId;
+    document.getElementById('imgidfield').textContent = data.context.pictureUrl;
 
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
