@@ -2,9 +2,6 @@ window.onload = function (e) {
     liff.init(function (data) {
         liff.getProfile().then(function (profile) {
             var profilePictureDiv = document.getElementById('profilepicturediv');
-            if (profilePictureDiv.firstElementChild) {
-                profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
-            }
             var img = document.createElement('img');
             img.src = profile.pictureUrl;
             img.alt = "Profile Picture";
