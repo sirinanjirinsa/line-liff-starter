@@ -63,11 +63,11 @@ function initializeApp(data) {
     });*/
 }
 
-function toggleProfileData() {
+/*function toggleProfileData() {
     var elem = document.getElementById('profileinfo');
     if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
         elem.style.display = "none";
     } else {
         elem.style.display = "block";
     }
-}
+}*/
