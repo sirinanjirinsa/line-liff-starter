@@ -56,18 +56,8 @@ function initializeApp(data) {
             profilePictureDiv.appendChild(img);
 
             document.getElementById('statusmessagefield').textContent = profile.statusMessage;
-            toggleProfileData();
         }).catch(function (error) {
             window.alert("Error getting profile: " + error);
         });
     });
-}
-
-function toggleProfileData() {
-    var elem = document.getElementById('profileinfo');
-    if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
-        elem.style.display = "none";
-    } else {
-        elem.style.display = "block";
-    }
 }
