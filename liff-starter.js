@@ -11,6 +11,24 @@ function initializeApp(data) {
     document.getElementById('utouidfield').textContent = data.context.utouId;
     document.getElementById('roomidfield').textContent = data.context.roomId;
     document.getElementById('groupidfield').textContent = data.context.groupId;
+    
+    liff.getProfile().then(function (profile) {
+            document.getElementById('useridprofilefield').textContent = profile.userId;
+            document.getElementById('displaynamefield').textContent = profile.displayName;
+
+            var profilePictureDiv = document.getElementById('profilepicturediv');
+            if (profilePictureDiv.firstElementChild) {
+                profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
+            }
+            var img = document.createElement('img');
+            img.src = profile.pictureUrl;
+            img.alt = "Profile Picture";
+            profilePictureDiv.appendChild(img);
+
+            document.getElementById('statusmessagefield').textContent = profile.statusMessage;
+        }).catch(function (error) {
+            window.alert("Error getting profile: " + error);
+        });
 
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
