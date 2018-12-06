@@ -1,9 +1,6 @@
 window.onload = function (e) {
     liff.init(function (data) {
-        initializeApp(data);
-    });
-    
-    liff.getProfile().then(function (profile) {
+        liff.getProfile().then(function (profile) {
             var profilePictureDiv = document.getElementById('profilepicturediv');
             if (profilePictureDiv.firstElementChild) {
                 profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
@@ -12,9 +9,12 @@ window.onload = function (e) {
             img.src = profile.pictureUrl;
             img.alt = "Profile Picture";
             profilePictureDiv.appendChild(img);
-     }).catch(function (error) {
+        }).catch(function (error) {
             window.alert("Error getting profile: " + error);
-     });
+        });
+        initializeApp(data);
+    });
+   
 };
 
 function initializeApp(data) {
