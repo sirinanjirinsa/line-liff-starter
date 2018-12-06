@@ -3,6 +3,10 @@ html{
     font-size: 11px;
 }
 
+body{
+    background: #A0D5F3
+}
+
 table {
     width: 100%;
     table-layout:fixed;
