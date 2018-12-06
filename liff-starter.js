@@ -13,9 +13,13 @@ window.onload = function (e) {
         
         document.getElementById('sendmessagebutton').addEventListener('click', function () {
             var messageuser = document.getElementById("fromname").value;
+            var subjectuser = document.getElementById("subjects").value;
+            var extuser = document.getElementById("extno").value;
             liff.sendMessages([{
                 type: 'text',
-                text: "Messageuser From : " + messageuser + "You've successfully sent a message! Hooray!"
+                text: "Message from : " + messageuser + "\n"+
+                      "Subject : "+ subjectuser + "\n"+
+                      "Please call me : " + extuser 
             }, {
                 type: 'sticker',
                 packageId: '2',
