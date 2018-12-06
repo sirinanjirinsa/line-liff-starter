@@ -20,10 +20,6 @@ window.onload = function (e) {
                 text: "Message from : " + messageuser + "\n"+
                       "Subject : "+ subjectuser + "\n"+
                       "Please call me : " + extuser 
-            }, {
-                type: 'sticker',
-                packageId: '2',
-                stickerId: '144'
             }]).then(function () {
                 window.alert("Message sent");
             }).catch(function (error) {
