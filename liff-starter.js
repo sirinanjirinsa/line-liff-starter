@@ -19,7 +19,7 @@ window.onload = function (e) {
                 type: 'text',
                 text: "From : " + messageuser + "\n"+
                       "Subject : "+ subjectuser + "\n"+
-                      "Please call me : " + extuser 
+                      "Call me back : " + extuser 
             }]).then(function () {
                 window.alert("Message sent");
             }).catch(function (error) {
