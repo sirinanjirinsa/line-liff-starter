@@ -13,11 +13,13 @@ window.onload = function (e) {
         
         document.getElementById('sendmessagebutton').addEventListener('click', function () {
             var messageuser = document.getElementById("fromname").value;
+            var roomno = document.getElementById("roomno").value;
             var subjectuser = document.getElementById("subjects").value;
             var extuser = document.getElementById("extno").value;
             liff.sendMessages([{
                 type: 'text',
                 text: "From : " + messageuser + "\n"+
+                      "Room no. : "+ roomno + "\n"+
                       "Subject : "+ subjectuser + "\n"+
                       "Call me back ext. : " + extuser 
             }]).then(function () {
