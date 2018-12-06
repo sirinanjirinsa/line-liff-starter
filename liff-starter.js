@@ -17,7 +17,7 @@ window.onload = function (e) {
             var extuser = document.getElementById("extno").value;
             liff.sendMessages([{
                 type: 'text',
-                text: "Message from : " + messageuser + "\n"+
+                text: "From : " + messageuser + "\n"+
                       "Subject : "+ subjectuser + "\n"+
                       "Please call me : " + extuser 
             }]).then(function () {
